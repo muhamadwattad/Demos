@@ -5,15 +5,11 @@ namespace Tests
     public class ControllerTests
     {
         [Fact]
-        public void GetNumbers_Returns_TheCorrectnumber()
+        public void GetNumbers_Returns_TheCorrectNumber()
         {
-            var food = new Food("Test", 50, true);
 
-            FoodService foodService = new FoodService();
-
-            var result = foodService.IsFoodHot(food);
-
-            Assert.Equal(food.isFoodHot,result);
+            bool result = new FoodService().IsFoodHot(new Food("Test", 50, true));
+            Assert.Equal(new Food("Test", 50, true).isFoodHot,result);
         }
     }
 }

@@ -4,7 +4,6 @@
     {
         public bool IsFoodHot(Food food)
         {
-            return false;
             return food.isFoodHot;
         }
     }
